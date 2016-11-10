@@ -107,15 +107,15 @@ var getName = function() {
 
 	setTimeout(function(){ 
 		g = getHour(); 
-	}, 1000);
+	}, 300);
 	setTimeout(function(){ 
 		d = getDay(); 
-	}, 2000);
+	}, 800);
 	setTimeout(function(){ 
 		// console.log([g,d])
 		// return [g,d];
 		reDrawHeat([g,d]);
-	}, 3000);
+	}, 1300);
 }
 
 document.getElementById("submit").addEventListener("click", getName);
