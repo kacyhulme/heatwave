@@ -70,7 +70,7 @@ var getName = function() {
 	}, 3000);
 }
 
-document.getElementById("submit").addEventListener("click", getName());
+document.getElementById("submit").addEventListener("click", getName);
 
 var drawHeat = function() {
 	var c = document.getElementById("canvas");
