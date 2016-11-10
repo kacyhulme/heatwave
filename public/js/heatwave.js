@@ -35,25 +35,25 @@ var getDay = function() {
 	}
 	switch (getx()) {
 		case "monday":
-			daygradient = ".1";
+			daygradient = ".11";
 			break;
 		case "tuesday":
-			daygradient = ".15";
+			daygradient = ".14";
 			break;
 		case "wednesday":
-			daygradient = ".2";
+			daygradient = ".16";
 			break;
 		case "thursday":
-			daygradient = ".25";
+			daygradient = ".18";
 			break;
 		case "friday":
-			daygradient = ".3";
+			daygradient = ".20";
 			break;
 		case "saturday":
-			daygradient = ".35";
+			daygradient = ".22";
 			break;
 		case "sunday":
-			daygradient = ".375";
+			daygradient = ".24";
 	}	
 	return daygradient
 }
@@ -71,16 +71,16 @@ var getHour = function() {
 			hourgradient = ".15";
 			break;
 		case "4pm-8pm":
-			hourgradient = ".2";
+			hourgradient = ".18";
 			break;
 		case "8pm-12am":
-			hourgradient = ".25";
+			hourgradient = ".2";
 			break;
 		case "12am-4am":
-			hourgradient = ".3";
+			hourgradient = ".22";
 			break;
 		case "4am-8am":
-			hourgradient = ".35";
+			hourgradient = ".26";
 	}
 	return hourgradient
 }
