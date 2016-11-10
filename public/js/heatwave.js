@@ -1,4 +1,20 @@
 
+var drawHeat = function(array) {
+	//console.log(array)
+	var c = document.getElementById("canvas");
+	var ctx = c.getContext("2d");
+
+	var gradient =  ctx.createLinearGradient(0,0,0,300);
+	gradient.addColorStop(.1,"blue");
+	gradient.addColorStop(.2,"yellow");
+	gradient.addColorStop(.3,"red");
+	gradient.addColorStop(.4,"blue");
+
+	ctx.fillStyle = gradient;
+	ctx.fillRect(0,0,600,200);
+}();
+
+
 var getDay = function() {
 	var getx = function() {
 		var x = document.getElementById("daysofweek").value;
@@ -6,25 +22,25 @@ var getDay = function() {
 	}
 	switch ("monday") {
 		case "monday":
-			daygradient = "5";
+			daygradient = ".1";
 			break;
 		case "tuesday":
-			daygradient = "10";
+			daygradient = ".15";
 			break;
 		case "wednesday":
-			daygradient = "15";
+			daygradient = ".2";
 			break;
 		case "thursday":
-			daygradient = "20";
+			daygradient = ".25";
 			break;
 		case "friday":
-			daygradient = "25";
+			daygradient = ".3";
 			break;
 		case "saturday":
-			daygradient = "30";
+			daygradient = ".35";
 			break;
 		case "sunday":
-			daygradient = "35";
+			daygradient = ".375";
 	}	
 	return daygradient
 }
@@ -36,28 +52,48 @@ var getHour = function() {
 	}
 	switch (gety()) {
 		case "8am-12pm":
-		hourgradient = "5";
+		hourgradient = ".1";
 		break;
 		case "12pm-4pm":
-		hourgradient = "10";
+		hourgradient = ".15";
 		break;
 		case "4pm-8pm":
-		hourgradient = "15";
+		hourgradient = ".2";
 		break;
 		case "8pm-12am":
-		hourgradient = "20";
+		hourgradient = ".25";
 		break;
 		case "12am-4am":
-		hourgradient = "25";
+		hourgradient = ".3";
 		break;
 		case "4am-8am":
-		hourgradient = "30";
+		hourgradient = ".35";
 	}
 	return hourgradient
 }
 
 
 var getName = function() {
+
+	var reDrawHeat = function(array) {
+		daygrade = array[0];
+		hourgrade = array[1]
+		daygrade1 = daygrade / 2;
+		hourgrade1 = hourgrade / 2;
+
+		var c = document.getElementById("canvas");
+		var ctx = c.getContext("2d");
+
+		var gradient =  ctx.createLinearGradient(0,0,0,300);
+			gradient.addColorStop(daygrade,"blue");
+			gradient.addColorStop(hourgrade,"yellow");
+			gradient.addColorStop(daygrade1,"red");
+			gradient.addColorStop(hourgrade1,"blue");
+
+		ctx.fillStyle = gradient;
+		ctx.fillRect(0,0,600,200);
+	};
+
 	setTimeout(function(){ 
 		g = getHour(); 
 	}, 1000);
@@ -65,23 +101,10 @@ var getName = function() {
 		d = getDay(); 
 	}, 2000);
 	setTimeout(function(){ 
-		console.log([g,d])
-		return [g,d];
+		// console.log([g,d])
+		// return [g,d];
+		reDrawHeat([g,d]);
 	}, 3000);
 }
 
 document.getElementById("submit").addEventListener("click", getName);
-
-var drawHeat = function() {
-	var c = document.getElementById("canvas");
-	var ctx = c.getContext("2d");
-
-	var gradient =  ctx.createLinearGradient(0,0,200,0);
-	gradient.addColorStop(0,"blue");
-	gradient.addColorStop(.5,"red");
-	gradient.addColorStop(1,"yellow");
-
-	ctx.fillStyle = gradient;
-	ctx.fillRect(0,0,600,200);
-}();
-
