@@ -29,7 +29,7 @@ var getDay = function() {
 
 		return x;
 	}();
-	switch ("monday") {
+	switch (getx()) {
 		case "monday":
 			daygradient = ".1";
 			break;
@@ -63,22 +63,22 @@ var getHour = function() {
 	}
 	switch (gety()) {
 		case "8am-12pm":
-		hourgradient = ".1";
-		break;
+			hourgradient = ".1";
+			break;
 		case "12pm-4pm":
-		hourgradient = ".15";
-		break;
+			hourgradient = ".15";
+			break;
 		case "4pm-8pm":
-		hourgradient = ".2";
-		break;
+			hourgradient = ".2";
+			break;
 		case "8pm-12am":
-		hourgradient = ".25";
-		break;
+			hourgradient = ".25";
+			break;
 		case "12am-4am":
-		hourgradient = ".3";
-		break;
+			hourgradient = ".3";
+			break;
 		case "4am-8am":
-		hourgradient = ".35";
+			hourgradient = ".35";
 	}
 	return hourgradient
 }

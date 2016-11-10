@@ -17,10 +17,10 @@ app.use(express.static(__dirname + '/public'));
 // set the home page route
 app.get('/', function(req, res) {
 
-    // ejs render automatically looks in the views folder
-    res.render('index');
+	// ejs render automatically looks in the views folder
+	res.render('index');
 });
 
 app.listen(port, function() {
-    console.log("I'm listening to you on http://localhost:" + port);
+	console.log("I'm listening to you on http://localhost:" + port);
 });
