@@ -4,11 +4,21 @@
   "description": "Heat map built with JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node server.js"
   },
   "author": "Kacy Hulme",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kacyhulme/heatwave.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kacyhulme/heatwave/issues"
+  },
+  "homepage": "https://github.com/kacyhulme/heatwave#readme"
 }

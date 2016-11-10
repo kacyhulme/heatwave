@@ -1,3 +1,6 @@
+// run with node server.js
+// heroku web address: https://shielded-ravine-94683.herokuapp.com
+
 var express = require('express');
 var app = express();
 
@@ -17,18 +20,6 @@ app.get('/', function(req, res) {
     // ejs render automatically looks in the views folder
     res.render('index');
 });
-
-// app.get('/about', function(req, res) {
-
-//     // ejs render automatically looks in the views folder
-//     res.render('about');
-// });
-
-// app.get('/contact', function(req, res) {
-
-//     // ejs render automatically looks in the views folder
-//     res.render('contact');
-// });
 
 app.listen(port, function() {
     console.log("I'm listening to you on http://localhost:" + port);
