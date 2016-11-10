@@ -1,0 +1,14 @@
+{
+  "name": "heatwave",
+  "version": "1.0.0",
+  "description": "Heat map built with JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Kacy Hulme",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
