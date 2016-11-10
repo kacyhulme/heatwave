@@ -14,21 +14,25 @@ var drawHeat = function(array) {
 	ctx.fillRect(0,0,600,200);
 }();
 
-
-var getDay = function() {
+var displaySelectionValue = function() {
 		var x = document.getElementById("daysofweek").value;
 		var displayday = document.getElementById("display-day");
 		displayday.innerHTML = x;
-		//console.log(displayday);
+		console.log(displayday);
 		var y = document.getElementById("hourofday").value;
 		var displayhour = document.getElementById("display-hour");
 		displayhour.innerHTML = y;	
-		//console.log(displayhour);
+		console.log(displayhour);
+}
+
+var getDay = function() {
   
+  displaySelectionValue();
+
   var getx = function() {
     var x = document.getElementById("daysofweek").value;
 		return x;
-	}();
+	}
 	switch (getx()) {
 		case "monday":
 			daygradient = ".1";
