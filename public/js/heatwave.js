@@ -16,17 +16,17 @@ var drawHeat = function(array) {
 
 
 var getDay = function() {
-	var getx = function() {
 		var x = document.getElementById("daysofweek").value;
 		var displayday = document.getElementById("display-day");
 		displayday.innerHTML = x;
 		//console.log(displayday);
-
 		var y = document.getElementById("hourofday").value;
 		var displayhour = document.getElementById("display-hour");
 		displayhour.innerHTML = y;	
 		//console.log(displayhour);
-
+  
+  var getx = function() {
+    var x = document.getElementById("daysofweek").value;
 		return x;
 	}();
 	switch (getx()) {
@@ -57,8 +57,6 @@ var getDay = function() {
 var getHour = function() {
 	var gety = function() {
 		var y = document.getElementById("hourofday").value;
-		// var displayhour = document.getElementById("display-hour");
-		// displayhour.innerHTML = y;		
 		return y;
 	}
 	switch (gety()) {
