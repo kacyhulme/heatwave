@@ -29,26 +29,24 @@
 	<div>
 		<div class="row">
 			<div class="col-md-2" id="hour-labels">
-				<b>Hour of Day</b>
-				<p>4am-8am</p>
-				<p>12am-4am</p>
-				<p>8pm-12am</p>
-				<p>4pm-8pm</p>
-				<p>12pm-4pm</p>
-				<p>8am-12pm</p>
+				<div>
+					<b>Hour of Day</b>
+				</div>
+				<p id="display-hour"></p>
 			</div>
-			<div class="col-md-10"><canvas id="canvas"></canvas></div>
-			<div class="row" style="margin-left: 80px">
-				<div class="col-md-2"><b>Day of Week</b></div>
-				<div class="col-md-1"><p>Mon</p></div>
-				<div class="col-md-1"><p>Tues</p></div>
-				<div class="col-md-1"><p>Wed</p></div>
-				<div class="col-md-1"><p>Thurs</p></div>
-				<div class="col-md-1"><p>Fri</p></div>
-				<div class="col-md-1"><p>Sat</p></div>
-				<div class="col-md-1"><p>Sun</p></div>
-				<div class="col-md-3"><p></p></div>
+			<div class="col-md-10">
+				<canvas id="canvas"></canvas>
 			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-2">
+				<b>Day of Week</b>
+			</div>
+			<div class="col-md-9">
+				<p id="display-day"></p>
+			</div>
+		</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="js/heatwave.js"></script>
