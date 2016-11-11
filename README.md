@@ -9,3 +9,5 @@ to run: node index.js
 + javascript 
 + HTML5 canvas
 + Bootstrap
+
+Hosted on Heroku: https://shielded-ravine-94683.herokuapp.com
